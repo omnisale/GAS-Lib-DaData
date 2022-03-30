@@ -1,0 +1,15 @@
+{
+  "timeZone": "Europe/Moscow",
+  "dependencies": {
+    "libraries": [{
+      "userSymbol": "OmniLib",
+      "libraryId": "1Osn9IRMvcVuhwAJlwpKOBfnWflJcaU7LWvY9gri3clmAQDAY9iVKIh1g",
+      "version": "37"
+    }]
+  },
+  "webapp": {
+    "access": "MYSELF",
+    "executeAs": "USER_DEPLOYING"
+  },
+  "exceptionLogging": "STACKDRIVER"
+}
