@@ -11,7 +11,6 @@ https://gist.github.com/nalgeon/a6db0827dad7a97da906d6427c070883
 
 */
 
-
 /* ------------  */
 
 function DaData(api_key,secret_key) {
