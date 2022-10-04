@@ -11,63 +11,6 @@ https://gist.github.com/nalgeon/a6db0827dad7a97da906d6427c070883
 
 */
 
-function test_clean() {
- var my_DD = new DaData('8bc470e12678748fe42cd9a07352d7c683019e26',"31aa174224832d947cb28e600a3ad384d5d7cf85");
- 
- var r=my_DD.cleanClient(
-   { 
-     address:'119464, Moscow	Moscow	улица Коштоянца 2,Западный административный округ кв. 253',
-     email:'fasfas',
-     phone: '89162192407',
-     name: 'PAVEL MAKOKLYUEV'
-   }
- );
- Logger.log(r);
- 
- for (var key in r) {
-  // этот код будет вызван для каждого свойства объекта
-  // ..и выведет имя свойства и его значение
-
-    Logger.log("Ключ: " + key + " значение: " );
-    Logger.log(r[key]);
-   }
-   
-   return true;
- 
-}
-
-function test_adr() {
-
-  var my_DD = new DaData('8bc470e12678748fe42cd9a07352d7c683019e26');
-  //var r=DDS.getTokeh('fdgfd');
-
-  var r=my_DD.guessAddressByPostCode('г. Москва, г. Зеленоград, мкр 3-й, дом 306', '124482' );
-   // Logger.log(r);
-  
-  if(r==null) { Logger.log("Aдрес не соответствует индекcу"); return false; }
-  
-  if(r.fias_level<8) { Logger.log("Не удалось распознать адрес по базе ФИАС с точносью до дома");   }
-  
-  for (var key in r) {
-  // этот код будет вызван для каждого свойства объекта
-  // ..и выведет имя свойства и его значение
-
-    Logger.log("Ключ: " + key + " значение: " + r[key] );
-   }
-   
-   return true;
-   
-   // код региона (первые два символа из region_kladr_id)
-   // местоположение (конструируем из region_with_type + area_with_type + city_with_type + settlement_with_type ) 
-   //    при этом смотрим region_type_full если он НЕ равен "город" то берём region_with_type (иначе пропускаем)
-   //    
-   // город/населённый пункт (settlement / а если оно пусто то city)
-   // улица (street_with_type)
-   // дом (house)
-   // корпус (block)
-   // квартира (flat)
-
-}
 
 /* ------------  */
 
